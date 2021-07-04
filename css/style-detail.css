@@ -1,0 +1,24 @@
+.about-nav {
+    background: #FACB7D;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.45) !important;
+}
+
+.about-nav ul li a {
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+.about-nav li a:hover {
+    background: white;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+footer {
+    color: black !important;
+    padding: 5px 0;
+}
+
+.page-footer {
+    background-color: #FACB7D !important;
+}

@@ -1,0 +1,381 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none !important;
+}
+
+nav ul li a {
+    color: #FACB7D;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 20);
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: black;
+    background: #FACB7D;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+.ubahnav {
+    background: #FACB7D;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.45) !important;
+}
+
+.ubahnav ul li a {
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+.ubahnav li a:hover {
+    background: white;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+
+.slider h3,
+.slider h5 {
+    text-shadow: 1px 1px 3px black;
+    color: #FACB7D;
+}
+
+.slider h5 span {
+
+    background-color: black;
+}
+
+
+/* about */
+
+/* .about {
+    margin-top: 1000px !important;
+} */
+
+.about h2 {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.about .tkami {
+    text-align: left;
+}
+
+.about .tkami span {
+
+    font-size: 25px;
+}
+
+/* .about .tkami span {
+    font-size: 30px;
+} */
+
+.about p,
+.about h5 {
+    color: black;
+}
+
+/* batas */
+
+/* catalogue */
+
+.product-grid .product-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.product-grid .product-image:before {
+    content: "";
+    background: rgba(250, 203, 125, 0.2);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.4s ease-out 0s;
+}
+
+.product-grid:hover .product-image:before {
+    opacity: 1;
+}
+
+.product-grid .product-image a {
+    display: block;
+}
+
+.product-grid .product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-image .pic-1 {
+    opacity: 1;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out 0s;
+}
+
+.product-grid:hover .product-image .pic-1 {
+    opacity: 0;
+}
+
+.product-image .pic-2 {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: scale(3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-out 0s;
+}
+
+.product-grid:hover .product-image .pic-2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product-image .product-trend-label {
+    content: "";
+    color: black;
+    background-color: #FACB7D;
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 7px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3;
+}
+
+
+.product-grid .social {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 4;
+}
+
+.product-grid .social li {
+    margin: 0 0 12px;
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: transform .3s ease-out 0s;
+}
+
+.product-grid:hover .social li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.product-grid:hover .social li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.product-grid:hover .social li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.product-grid:hover .social li:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.product-grid .social li a {
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+
+.product-grid .social li a:before,
+.product-grid .social li a:after {
+    content: attr(data-tip);
+    color: #000;
+    background: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    display: none;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transition: all 0.3s;
+}
+
+.product-grid .social li a:after {
+    content: '';
+    background: linear-gradient(-45deg, #fff 49%, transparent 50%);
+    width: 10px;
+    height: 10px;
+    top: 40%;
+    left: 20px;
+}
+
+.product-grid .social li a:hover:before,
+.product-grid .social li a:hover:after {
+    display: block;
+}
+
+.product-grid .social li a img {
+    width: 30px;
+    height: auto;
+}
+
+.product-grid .product-content {
+    padding: 12px 0;
+}
+
+.product-grid .title {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+
+.product-grid .title a {
+    color: #959595;
+}
+
+.product-grid .title a:hover {
+    color: var(--main-color);
+}
+
+.product-grid .price {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-grid .price span {
+    color: #333;
+    text-decoration: line-through;
+    margin-right: 3px;
+}
+
+
+@media only screen and (max-width:990px) {
+    .product-grid {
+        margin-bottom: 30px;
+    }
+}
+
+.container .more {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* batas */
+
+
+/* medsos */
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+/* untuk boxnya medsos */
+.social-media a {
+    display: flex;
+    background: #fff;
+    height: 100px;
+    width: 100px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: transform 0.5s;
+}
+
+.social-media a i {
+    font-size: 35px;
+    color: #777;
+    transition: transform 0.5s;
+}
+
+.social-media a:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset 4px 4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.0.5);
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transform: translateY(2px);
+}
+
+/* menegcilkan logo ketika mouse masuk */
+.social-media a:hover i {
+    transform: scale(1.5);
+}
+
+.social-media a:hover .fa-facebook {
+    color: #3b5998;
+}
+
+.social-media a:hover .fa-twitter {
+    color: #00acee;
+}
+
+.social-media a:hover .fa-instagram {
+    color: #f14843;
+}
+
+.jarak {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* batas medsos */
+
+
+/* parallax */
+.parlax-part {
+    height: 20%;
+}
+
+.partner h2 {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 5)
+}
+
+.partner img {
+    max-width: 50%;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.8));
+}
+
+.img-part img {
+    filter: grayscale();
+    opacity: 0.5 !important;
+}
+
+/* batas */
+
+footer {
+    color: black !important;
+    padding: 5px 0;
+}
+
+.page-footer {
+    background-color: #FACB7D !important;
+}
