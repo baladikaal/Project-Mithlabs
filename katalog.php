@@ -81,27 +81,6 @@ include 'koneksi.php';
         </div>
     </section>
 
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large orange">
-            <i class="large material-icons">call</i>
-        </a>
-        <ul>
-            <li>
-                <a class="fa fa-whatsapp btn-floating green"
-                    href="https://wa.me/6282299238723?text=Halo Admin, Saya ingin bertanya." target="_blank"
-                    title="click to open whatsapp chat"></a>
-            </li>
-            <li>
-                <a class="fa fa-whatsapp btn-floating green"
-                    href="https://wa.me/6281316808779?text=Halo Admin, Saya ingin bertanya." target="_blank"
-                    title="click to open whatsapp chat"></a>
-            </li>
-        </ul>
-    </div>
-
-
-
-
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 

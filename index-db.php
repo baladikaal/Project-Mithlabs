@@ -257,11 +257,6 @@ include 'koneksi.php';
                     href="https://wa.me/6282299238723?text=Halo Admin, Saya ingin bertanya." target="_blank"
                     title="click to open whatsapp chat"></a>
             </li>
-            <li>
-                <a class="fa fa-whatsapp btn-floating green"
-                    href="https://wa.me/6281316808779?text=Halo Admin, Saya ingin bertanya." target="_blank"
-                    title="click to open whatsapp chat"></a>
-            </li>
         </ul>
     </div>
 
@@ -280,6 +275,7 @@ include 'koneksi.php';
         AOS.init({
             once: true
         });
+        
     </script>
 
 </body>
