@@ -1,47 +1,53 @@
 <h2>DATA PRODUK</h2>
 <br>
 <a href="index.php?halaman=addproduk" class="btn btn-primary">Tambah Produk</a>
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+
+<button id="btnExcel" type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 	Upload Data Excel Produk (.Xls)
 </button>
+
+
 <br>
-<table class="table  table-bordered">
-	<br>
-	<thead>
-		<tr>
-			<th>No</th>
-			<th>Nama</th>
-			<th>label</th>
-			<th>Foto 1</th>
-			<th>Foto 2</th>
-			<th>Aksi</th>
-		</tr>
-	</thead>
-	<tbody> 
-		<?php $nomor=1;  ?>
-		<?php $ambil = $koneksi->query("SELECT * FROM tbl_produk"); ?>
-		<?php while ($pecah = $ambil->fetch_assoc()){  ?>
-		<tr>
-			<td><?php echo $nomor;  ?></td>
-			<td><?php echo $pecah['nama_produk']; ?></td>
-			<td><?php echo $pecah['label_produk']; ?> Produk</td>
-			<td>
-				 <!-- "Foto Produk" adalah tempat nama folder foto yang akan di simpan-->
-				<img src="../Foto Produk/<?php echo $pecah['foto1_produk'];  ?>" width="100">
-			</td>
-			<td>
-				 <!-- "Foto Produk" adalah tempat nama folder foto yang akan di simpan-->
-				<img src="../Foto Produk/<?php echo $pecah['foto2_produk'];  ?>" width="100">
-			</td>
-			<td>
-				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk'];  ?>" class="btn-danger btn">hapus</a>
-				<a href="index.php?halaman=ubahdataproduk&id=<?php echo $pecah['id_produk'];  ?>" class="btn btn-warning">ubah</a>
-			</td>
-		</tr>	
-		<?php $nomor++;  ?>
-		<?php }  ?>
-	</tbody>
-</table>
+<br>
+<div class="table-responsive">
+	<table id="example" class="table table-striped table-bordered" style="width:100%">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Nama</th>
+				<th>label</th>
+				<th>Foto 1</th>
+				<th>Foto 2</th>
+				<th>Aksi</th>
+			</tr>
+		</thead>
+		<tbody> 
+			<?php $nomor=1;  ?>
+			<?php $ambil = $koneksi->query("SELECT * FROM tbl_produk"); ?>
+			<?php while ($pecah = $ambil->fetch_assoc()){  ?>
+			<tr>
+				<td><?php echo $nomor;  ?></td>
+				<td><?php echo $pecah['nama_produk']; ?></td>
+				<td><?php echo $pecah['label_produk']; ?> Produk</td>
+				<td>
+					<!-- "Foto Produk" adalah tempat nama folder foto yang akan di simpan-->
+					<img src="../Foto Produk/<?php echo $pecah['foto1_produk'];  ?>" width="100">
+				</td>
+				<td>
+					<!-- "Foto Produk" adalah tempat nama folder foto yang akan di simpan-->
+					<img src="../Foto Produk/<?php echo $pecah['foto2_produk'];  ?>" width="100">
+				</td>
+				<td>
+					<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk'];  ?>" class="btn-danger btn">hapus</a>
+					<a href="index.php?halaman=ubahdataproduk&id=<?php echo $pecah['id_produk'];  ?>" class="btn btn-warning">ubah</a>
+				</td>
+			</tr>	
+			<?php $nomor++;  ?>
+			<?php }  ?>
+		</tbody>
+        
+    </table>
+</div>
 
 <!-- untuk pop modal upload -->
 <!-- Modal -->
